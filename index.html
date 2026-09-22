@@ -996,7 +996,7 @@ footer h2{
   }
   .stat:nth-child(3){border-right:0;}
   .stat:nth-child(-n+3){border-bottom:1px solid var(--line);}
-  #suicida-ink-project{padding:28px !important;}
+  #suicida-ink-project,#orbitlens-project{padding:28px !important;}
 }
 @media(max-width:700px){
   section{padding-top:72px;padding-bottom:72px;}
@@ -1008,6 +1008,250 @@ footer h2{
   .stat:nth-child(even){border-right:0 !important;}
   .stat:nth-child(-n+4){border-bottom:1px solid var(--line);}
   .navlinks{display:none;}
+}
+</style>
+
+
+<style id="orbitlens-project-styles">
+/* OrbitLens featured iOS project */
+#orbitlens-project{
+  padding:34px 36px !important;
+  margin-bottom:22px;
+}
+#orbitlens-project .featured-grid{
+  display:block !important;
+}
+#orbitlens-project .featured-copy{
+  max-width:940px !important;
+  margin:0 !important;
+}
+#orbitlens-project .featured-eyebrow::before{
+  background:#0a84ff;
+  box-shadow:0 0 0 6px rgba(10,132,255,.12);
+}
+#orbitlens-project .orbit-status{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:6px 9px;
+  border-radius:999px;
+  border:1px solid #e4e4e7;
+  background:#f7f7f8;
+  color:#5c5c61;
+  font-size:11.5px;
+  font-weight:600;
+  margin:2px 0 2px;
+}
+#orbitlens-project .orbit-status::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#ff9f0a;
+}
+.orbit-gallery-shell{
+  margin-top:30px;
+  padding-top:26px;
+  border-top:1px solid var(--line);
+}
+.orbit-gallery-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:18px;
+  margin-bottom:14px;
+}
+.orbit-gallery-header h4{
+  margin:0;
+  font-size:15px;
+  letter-spacing:-.01em;
+}
+.orbit-gallery-header p{
+  margin:4px 0 0;
+  color:var(--ink-soft);
+  font-size:12.5px;
+}
+.orbit-gallery-controls{
+  display:flex;
+  gap:7px;
+  flex:none;
+}
+.orbit-gallery-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:1px solid #dddddf;
+  background:#fff;
+  color:var(--ink);
+  display:grid;
+  place-items:center;
+  font:inherit;
+  cursor:pointer;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.orbit-gallery-btn:hover{
+  background:#f4f4f5;
+  border-color:#cfcfd3;
+  transform:translateY(-1px);
+}
+.orbit-gallery-track{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:thin;
+  scrollbar-color:#d4d4d8 transparent;
+  padding:3px 2px 13px;
+  -webkit-overflow-scrolling:touch;
+}
+.orbit-shot{
+  flex:0 0 clamp(164px,18vw,208px);
+  scroll-snap-align:start;
+  padding:0;
+  border:0;
+  background:transparent;
+  text-align:left;
+  cursor:zoom-in;
+  font:inherit;
+  color:inherit;
+}
+.orbit-phone{
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  background:#050505;
+  border:1px solid #d7d7da;
+  box-shadow:0 12px 28px rgba(20,20,25,.10);
+  transition:transform .24s ease,box-shadow .24s ease;
+}
+.orbit-shot:hover .orbit-phone{
+  transform:translateY(-4px);
+  box-shadow:0 19px 38px rgba(20,20,25,.16);
+}
+.orbit-phone img{
+  width:100%;
+  height:auto;
+  display:block;
+  aspect-ratio:941/2048;
+  object-fit:cover;
+}
+.orbit-shot-label{
+  display:block;
+  margin-top:8px;
+  padding:0 2px;
+  font-size:11.5px;
+  line-height:1.35;
+  color:#68686d;
+}
+.orbit-gallery-hint{
+  margin-top:1px;
+  color:#88888e;
+  font-size:11.5px;
+}
+.orbit-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:250000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:26px;
+  background:rgba(0,0,0,.80);
+  backdrop-filter:blur(14px);
+}
+.orbit-lightbox.is-open{display:flex;}
+.orbit-lightbox-dialog{
+  width:min(94vw,560px);
+  max-height:92vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:13px;
+  outline:none;
+}
+.orbit-lightbox-img{
+  display:block;
+  max-width:min(88vw,430px);
+  max-height:82vh;
+  width:auto;
+  height:auto;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:0 30px 80px rgba(0,0,0,.48);
+}
+.orbit-lightbox-meta{
+  width:min(88vw,430px);
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:center;
+  font-size:12px;
+}
+.orbit-lightbox-caption{
+  color:rgba(255,255,255,.82);
+  line-height:1.35;
+}
+.orbit-lightbox-counter{
+  color:rgba(255,255,255,.55);
+  white-space:nowrap;
+}
+.orbit-lightbox-close,
+.orbit-lightbox-nav{
+  position:fixed;
+  z-index:250001;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(30,30,32,.62);
+  color:#fff;
+  backdrop-filter:blur(10px);
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+}
+.orbit-lightbox-close{
+  top:20px;
+  right:20px;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  font-size:22px;
+}
+.orbit-lightbox-nav{
+  top:50%;
+  width:46px;
+  height:46px;
+  margin-top:-23px;
+  border-radius:50%;
+  font-size:24px;
+}
+.orbit-lightbox-prev{left:22px;}
+.orbit-lightbox-next{right:22px;}
+body.orbit-lightbox-open{overflow:hidden;}
+
+@media(max-width:900px){
+  #orbitlens-project{padding:28px !important;}
+  .orbit-shot{flex-basis:180px;}
+}
+@media(max-width:600px){
+  #orbitlens-project{padding:24px 18px !important;}
+  .orbit-gallery-header{align-items:center;}
+  .orbit-gallery-controls{display:none;}
+  .orbit-shot{flex-basis:46vw;}
+  .orbit-lightbox{padding:18px;}
+  .orbit-lightbox-img{max-width:78vw;max-height:80vh;border-radius:24px;}
+  .orbit-lightbox-meta{width:78vw;}
+  .orbit-lightbox-nav{
+    width:40px;height:40px;margin-top:-20px;font-size:21px;
+    background:rgba(30,30,32,.75);
+  }
+  .orbit-lightbox-prev{left:8px;}
+  .orbit-lightbox-next{right:8px;}
+  .orbit-lightbox-close{top:12px;right:12px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .orbit-phone,.orbit-gallery-btn{transition:none!important;}
+  .orbit-shot:hover .orbit-phone{transform:none;}
 }
 </style>
 
@@ -1267,6 +1511,142 @@ footer h2{
       <div class="kicker">Projects</div>
     </div>
     
+
+      <article class="featured-project reveal" id="orbitlens-project">
+        <div class="featured-grid">
+          <div class="featured-copy">
+            <div class="featured-eyebrow">Featured iOS / AR project · In development</div>
+            <h3>OrbitLens</h3>
+            <div class="orbit-status">Native iPhone app · Active build</div>
+            <p class="lead">Building a native <strong>iOS sky-exploration app</strong> that combines augmented-reality guidance with satellite, star, and planet discovery, map-based observation planning, saved objects, notifications, and privacy-aware settings.</p>
+
+            <div class="project-detail-block">
+              <div class="project-detail-label">Architecture</div>
+              <div class="architecture-flow">SwiftUI → ARKit / SceneKit + Core Location → MapKit + orbital catalog / SGP4 calculations</div>
+            </div>
+
+            <div class="project-detail-block">
+              <div class="project-detail-label">Core Engineering</div>
+              <div class="tech-stack" aria-label="OrbitLens technology stack">
+                <span class="tech-pill">SwiftUI</span>
+                <span class="tech-pill">ARKit</span>
+                <span class="tech-pill">SceneKit</span>
+                <span class="tech-pill">MapKit</span>
+                <span class="tech-pill">Core Location</span>
+                <span class="tech-pill">CelesTrak TLE</span>
+                <span class="tech-pill">SGP4</span>
+                <span class="tech-pill">Search &amp; Saved Objects</span>
+                <span class="tech-pill">Notifications</span>
+                <span class="tech-pill">Accessibility</span>
+                <span class="tech-pill">Native iOS UI</span>
+              </div>
+            </div>
+
+            <p class="project-engineering-copy">Designed the launch experience and the Explore, Search, Map, Saved, and Profile flows, including satellite / star / planet catalogs, object detail sheets, observation planning, map controls, account and privacy settings, accessibility options, reminder scheduling, and app-level preferences.</p>
+
+            <div class="project-actions">
+              <a class="project-link primary" href="#orbitlens-gallery">View 20 app screens ↓</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="orbit-gallery-shell" id="orbitlens-gallery">
+          <div class="orbit-gallery-header">
+            <div>
+              <h4>Interface gallery</h4>
+              <p>20 iPhone screens from the current OrbitLens build.</p>
+            </div>
+            <div class="orbit-gallery-controls" aria-label="OrbitLens gallery controls">
+              <button class="orbit-gallery-btn" type="button" data-orbit-scroll="-1" aria-label="Scroll gallery left">‹</button>
+              <button class="orbit-gallery-btn" type="button" data-orbit-scroll="1" aria-label="Scroll gallery right">›</button>
+            </div>
+          </div>
+          <div class="orbit-gallery-track" tabindex="0" aria-label="OrbitLens screenshot gallery">
+            <button class="orbit-shot" type="button" data-orbit-index="0" aria-label="Open OrbitLens screenshot 1: iPhone home screen with the OrbitLens app">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-01.webp" alt="OrbitLens screenshot 1: iPhone home screen with the OrbitLens app" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">01 · iPhone home screen with the OrbitLens app</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="1" aria-label="Open OrbitLens screenshot 2: OrbitLens launch experience">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-02.webp" alt="OrbitLens screenshot 2: OrbitLens launch experience" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">02 · OrbitLens launch experience</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="2" aria-label="Open OrbitLens screenshot 3: Explore — AR sky view permission state">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-03.webp" alt="OrbitLens screenshot 3: Explore — AR sky view permission state" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">03 · Explore — AR sky view permission state</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="3" aria-label="Open OrbitLens screenshot 4: Explore — Satellites, Stars and Planets categories">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-04.webp" alt="OrbitLens screenshot 4: Explore — Satellites, Stars and Planets categories" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">04 · Explore — Satellites, Stars and Planets categories</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="4" aria-label="Open OrbitLens screenshot 5: Search — satellite catalog">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-05.webp" alt="OrbitLens screenshot 5: Search — satellite catalog" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">05 · Search — satellite catalog</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="5" aria-label="Open OrbitLens screenshot 6: Search — expanded satellite results">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-06.webp" alt="OrbitLens screenshot 6: Search — expanded satellite results" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">06 · Search — expanded satellite results</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="6" aria-label="Open OrbitLens screenshot 7: Search — star catalog">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-07.webp" alt="OrbitLens screenshot 7: Search — star catalog" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">07 · Search — star catalog</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="7" aria-label="Open OrbitLens screenshot 8: Search — planet catalog">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-08.webp" alt="OrbitLens screenshot 8: Search — planet catalog" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">08 · Search — planet catalog</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="8" aria-label="Open OrbitLens screenshot 9: Solar System — Sun detail sheet">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-09.webp" alt="OrbitLens screenshot 9: Solar System — Sun detail sheet" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">09 · Solar System — Sun detail sheet</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="9" aria-label="Open OrbitLens screenshot 10: Map — observation map overview">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-10.webp" alt="OrbitLens screenshot 10: Map — observation map overview" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">10 · Map — observation map overview</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="10" aria-label="Open OrbitLens screenshot 11: Map — 3D map mode">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-11.webp" alt="OrbitLens screenshot 11: Map — 3D map mode" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">11 · Map — 3D map mode</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="11" aria-label="Open OrbitLens screenshot 12: Map — plan an observation">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-12.webp" alt="OrbitLens screenshot 12: Map — plan an observation" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">12 · Map — plan an observation</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="12" aria-label="Open OrbitLens screenshot 13: Profile — saved objects and preferences">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-13.webp" alt="OrbitLens screenshot 13: Profile — saved objects and preferences" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">13 · Profile — saved objects and preferences</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="13" aria-label="Open OrbitLens screenshot 14: Account Settings">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-14.webp" alt="OrbitLens screenshot 14: Account Settings" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">14 · Account Settings</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="14" aria-label="Open OrbitLens screenshot 15: Notifications — observation reminder">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-15.webp" alt="OrbitLens screenshot 15: Notifications — observation reminder" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">15 · Notifications — observation reminder</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="15" aria-label="Open OrbitLens screenshot 16: Location & Privacy">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-16.webp" alt="OrbitLens screenshot 16: Location & Privacy" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">16 · Location & Privacy</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="16" aria-label="Open OrbitLens screenshot 17: Accessibility settings">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-17.webp" alt="OrbitLens screenshot 17: Accessibility settings" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">17 · Accessibility settings</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="17" aria-label="Open OrbitLens screenshot 18: iOS system permissions for OrbitLens">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-18.webp" alt="OrbitLens screenshot 18: iOS system permissions for OrbitLens" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">18 · iOS system permissions for OrbitLens</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="18" aria-label="Open OrbitLens screenshot 19: About OrbitLens">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-19.webp" alt="OrbitLens screenshot 19: About OrbitLens" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">19 · About OrbitLens</span>
+            </button>
+            <button class="orbit-shot" type="button" data-orbit-index="19" aria-label="Open OrbitLens screenshot 20: Settings — Explore preferences">
+              <span class="orbit-phone"><img src="assets/orbitlens/orbitlens-20.webp" alt="OrbitLens screenshot 20: Settings — Explore preferences" loading="lazy" decoding="async"></span>
+              <span class="orbit-shot-label">20 · Settings — Explore preferences</span>
+            </button>
+          </div>
+          <div class="orbit-gallery-hint">Swipe or scroll through the gallery. Select any screen to enlarge it.</div>
+        </div>
+      </article>
+
       <article class="featured-project reveal" id="suicida-ink-project">
         <div class="featured-grid">
           <div class="featured-copy">
@@ -1652,6 +2032,87 @@ section[id],footer[id]{scroll-margin-top:72px;}
 
 
 
+
+
+<script id="orbitlens-gallery-script">
+(function(){
+  const project = document.getElementById('orbitlens-project');
+  if(!project) return;
+
+  const track = project.querySelector('.orbit-gallery-track');
+  const shots = Array.from(project.querySelectorAll('.orbit-shot'));
+  const images = shots.map(shot => shot.querySelector('img'));
+  let current = 0;
+  let lastFocus = null;
+
+  project.querySelectorAll('[data-orbit-scroll]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const direction = Number(btn.getAttribute('data-orbit-scroll')) || 1;
+      const amount = Math.max(260, track.clientWidth * .78);
+      track.scrollBy({left:direction * amount, behavior:'smooth'});
+    });
+  });
+
+  const lightbox = document.createElement('div');
+  lightbox.className = 'orbit-lightbox';
+  lightbox.setAttribute('aria-hidden','true');
+  lightbox.innerHTML = `
+    <button class="orbit-lightbox-close" type="button" aria-label="Close OrbitLens screenshot">×</button>
+    <button class="orbit-lightbox-nav orbit-lightbox-prev" type="button" aria-label="Previous screenshot">‹</button>
+    <div class="orbit-lightbox-dialog" role="dialog" aria-modal="true" aria-label="OrbitLens screenshot viewer" tabindex="-1">
+      <img class="orbit-lightbox-img" alt="">
+      <div class="orbit-lightbox-meta">
+        <span class="orbit-lightbox-caption"></span>
+        <span class="orbit-lightbox-counter"></span>
+      </div>
+    </div>
+    <button class="orbit-lightbox-nav orbit-lightbox-next" type="button" aria-label="Next screenshot">›</button>
+  `;
+  document.body.appendChild(lightbox);
+
+  const dialog = lightbox.querySelector('.orbit-lightbox-dialog');
+  const viewer = lightbox.querySelector('.orbit-lightbox-img');
+  const caption = lightbox.querySelector('.orbit-lightbox-caption');
+  const counter = lightbox.querySelector('.orbit-lightbox-counter');
+
+  function render(index){
+    current = (index + shots.length) % shots.length;
+    viewer.src = images[current].src;
+    viewer.alt = images[current].alt;
+    caption.textContent = shots[current].querySelector('.orbit-shot-label').textContent.replace(/^\d+\s·\s/,'');
+    counter.textContent = `${current + 1} / ${shots.length}`;
+  }
+
+  function open(index, trigger){
+    lastFocus = trigger || document.activeElement;
+    render(index);
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.classList.add('orbit-lightbox-open');
+    dialog.focus();
+  }
+
+  function close(){
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden','true');
+    document.body.classList.remove('orbit-lightbox-open');
+    if(lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  shots.forEach((shot,index) => shot.addEventListener('click',() => open(index,shot)));
+  lightbox.querySelector('.orbit-lightbox-close').addEventListener('click',close);
+  lightbox.querySelector('.orbit-lightbox-prev').addEventListener('click',() => render(current-1));
+  lightbox.querySelector('.orbit-lightbox-next').addEventListener('click',() => render(current+1));
+  lightbox.addEventListener('click',e => { if(e.target === lightbox) close(); });
+
+  document.addEventListener('keydown',e => {
+    if(!lightbox.classList.contains('is-open')) return;
+    if(e.key === 'Escape') close();
+    if(e.key === 'ArrowLeft') render(current-1);
+    if(e.key === 'ArrowRight') render(current+1);
+  });
+})();
+</script>
 
 </body>
 </html>

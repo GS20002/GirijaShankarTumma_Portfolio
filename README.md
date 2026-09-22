@@ -1,2 +1,0 @@
-# GirijaShankarTumma_Portfolio
-Portfolio
